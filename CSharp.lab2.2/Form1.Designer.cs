@@ -32,11 +32,11 @@
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
+            initialPayment = new TextBox();
+            limitOfExceedingValue = new TextBox();
+            limitOfExceedingDepositAmount = new TextBox();
             label4 = new Label();
-            textBox4 = new TextBox();
+            numberOfMonths = new TextBox();
             buttonTask = new Button();
             SuspendLayout();
             // 
@@ -76,26 +76,26 @@
             label3.TabIndex = 3;
             label3.Text = "Граница превышения размера вклада за n-месяцев:";
             // 
-            // textBox1
+            // initialPayment
             // 
-            textBox1.Location = new Point(12, 132);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(201, 27);
-            textBox1.TabIndex = 4;
+            initialPayment.Location = new Point(12, 132);
+            initialPayment.Name = "initialPayment";
+            initialPayment.Size = new Size(201, 27);
+            initialPayment.TabIndex = 4;
             // 
-            // textBox2
+            // limitOfExceedingValue
             // 
-            textBox2.Location = new Point(12, 197);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(201, 27);
-            textBox2.TabIndex = 5;
+            limitOfExceedingValue.Location = new Point(12, 197);
+            limitOfExceedingValue.Name = "limitOfExceedingValue";
+            limitOfExceedingValue.Size = new Size(201, 27);
+            limitOfExceedingValue.TabIndex = 5;
             // 
-            // textBox3
+            // limitOfExceedingDepositAmount
             // 
-            textBox3.Location = new Point(12, 264);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(201, 27);
-            textBox3.TabIndex = 6;
+            limitOfExceedingDepositAmount.Location = new Point(12, 264);
+            limitOfExceedingDepositAmount.Name = "limitOfExceedingDepositAmount";
+            limitOfExceedingDepositAmount.Size = new Size(201, 27);
+            limitOfExceedingDepositAmount.TabIndex = 6;
             // 
             // label4
             // 
@@ -106,12 +106,12 @@
             label4.TabIndex = 7;
             label4.Text = "Число месяцев:";
             // 
-            // textBox4
+            // numberOfMonths
             // 
-            textBox4.Location = new Point(12, 79);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(60, 27);
-            textBox4.TabIndex = 8;
+            numberOfMonths.Location = new Point(12, 79);
+            numberOfMonths.Name = "numberOfMonths";
+            numberOfMonths.Size = new Size(60, 27);
+            numberOfMonths.TabIndex = 8;
             // 
             // buttonTask
             // 
@@ -128,11 +128,11 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(584, 450);
             Controls.Add(buttonTask);
-            Controls.Add(textBox4);
+            Controls.Add(numberOfMonths);
             Controls.Add(label4);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(limitOfExceedingDepositAmount);
+            Controls.Add(limitOfExceedingValue);
+            Controls.Add(initialPayment);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -149,11 +149,11 @@
         private Label label1;
         private Label label2;
         private Label label3;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
+        private TextBox initialPayment;
+        private TextBox limitOfExceedingValue;
+        private TextBox limitOfExceedingDepositAmount;
         private Label label4;
-        private TextBox textBox4;
+        private TextBox numberOfMonths;
         private Button buttonTask;
     }
 }
