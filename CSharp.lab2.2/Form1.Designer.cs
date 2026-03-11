@@ -48,6 +48,7 @@
             buttonStart.TabIndex = 0;
             buttonStart.Text = "Запуск";
             buttonStart.UseVisualStyleBackColor = true;
+            buttonStart.Click += buttonStart_Click;
             // 
             // label1
             // 
@@ -121,6 +122,7 @@
             buttonTask.TabIndex = 9;
             buttonTask.Text = "Задание";
             buttonTask.UseVisualStyleBackColor = true;
+            buttonTask.Click += buttonTask_Click;
             // 
             // Form1
             // 
