@@ -36,9 +36,22 @@ namespace CSharp.lab2._2
 
                     if (newSum > result2 && !flagRes2)
                     {
+                        if (i == 1)
+                        {
+                            result += "\nЧерез " + i + " месяц мы накопим деньги";
+                            flagRes2 = true;
+                        }
+                        else if (i == 3 || i == 4 || i == 2)
+                        {
+                            result += "\nЧерез " + i + " месяца мы накопим деньги";
+                            flagRes2 = true;
+                        }
 
-                        result += "\nЧерез " + i + " месяцев мы накопим деньги";
-                        flagRes2 = true;
+                        else
+                        {
+                            result += "\nЧерез " + i + " месяцев мы накопим деньги";
+                            flagRes2 = true;
+                        }
                     }
 
                     result += "\nМесяц " + i + ": " + newSum.ToString("F2") + " руб. " + " " + percent.ToString("F2");
@@ -65,6 +78,7 @@ namespace CSharp.lab2._2
 
             try
             {
+
                 mounthButton = int.Parse(this.numberOfMonths.Text);
                 initialPaymentButton = double.Parse(this.initialPayment.Text);
                 limitOfExceedingValueButton = double.Parse(this.limitOfExceedingValue.Text);
@@ -73,6 +87,21 @@ namespace CSharp.lab2._2
                 {
                     MessageBox.Show("Значения должны быть больше 0");
                     return;
+                }
+
+                if (mounthButton == 1)
+                {
+                    labeLlimitOfExceedingDepositAmount.Text = "Граница превышения размера вклада за " + mounthButton + " - месяц:";
+                }
+
+                else if (mounthButton == 3 || mounthButton == 4 || mounthButton == 2)
+                {
+                    labeLlimitOfExceedingDepositAmount.Text = "Граница превышения размера вклада за " + mounthButton + " - месяца:";
+                }
+
+                else
+                {
+                    labeLlimitOfExceedingDepositAmount.Text = "Граница превышения размера вклада за " + mounthButton + " - месяцев:";
                 }
             }
             catch(FormatException)

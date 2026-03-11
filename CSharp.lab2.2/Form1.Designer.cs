@@ -31,7 +31,7 @@
             buttonStart = new Button();
             label1 = new Label();
             label2 = new Label();
-            label3 = new Label();
+            labeLlimitOfExceedingDepositAmount = new Label();
             initialPayment = new TextBox();
             limitOfExceedingValue = new TextBox();
             limitOfExceedingDepositAmount = new TextBox();
@@ -68,14 +68,14 @@
             label2.TabIndex = 2;
             label2.Text = "Граница превышения величины ежемесячного увеличения вклада:";
             // 
-            // label3
+            // labeLlimitOfExceedingDepositAmount
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(12, 241);
-            label3.Name = "label3";
-            label3.Size = new Size(377, 20);
-            label3.TabIndex = 3;
-            label3.Text = "Граница превышения размера вклада за n-месяцев:";
+            labeLlimitOfExceedingDepositAmount.AutoSize = true;
+            labeLlimitOfExceedingDepositAmount.Location = new Point(12, 241);
+            labeLlimitOfExceedingDepositAmount.Name = "labeLlimitOfExceedingDepositAmount";
+            labeLlimitOfExceedingDepositAmount.Size = new Size(377, 20);
+            labeLlimitOfExceedingDepositAmount.TabIndex = 3;
+            labeLlimitOfExceedingDepositAmount.Text = "Граница превышения размера вклада за n-месяцев:";
             // 
             // initialPayment
             // 
@@ -135,7 +135,7 @@
             Controls.Add(limitOfExceedingDepositAmount);
             Controls.Add(limitOfExceedingValue);
             Controls.Add(initialPayment);
-            Controls.Add(label3);
+            Controls.Add(labeLlimitOfExceedingDepositAmount);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(buttonStart);
@@ -150,7 +150,7 @@
         private Button buttonStart;
         private Label label1;
         private Label label2;
-        private Label label3;
+        private Label labeLlimitOfExceedingDepositAmount;
         private TextBox initialPayment;
         private TextBox limitOfExceedingValue;
         private TextBox limitOfExceedingDepositAmount;
