@@ -5,6 +5,11 @@ namespace CSharp.lab2._2
         public Form1()
         {
             InitializeComponent();
+
+            numberOfMonths.Text = Properties.Settings.Default.mounthButton.ToString();
+            initialPayment.Text = Properties.Settings.Default.initialPaymentButton.ToString();
+            limitOfExceedingValue.Text = Properties.Settings.Default.limitOfExceedingValueButton.ToString();
+            limitOfExceedingDepositAmount.Text = Properties.Settings.Default.limitOfExceedingDepositAmountButton.ToString();
         }
 
         public class Logic()
@@ -52,6 +57,7 @@ namespace CSharp.lab2._2
 
         public void buttonStart_Click(object sender, EventArgs e)
         {
+
             int mounthButton;
             double initialPaymentButton;
             double limitOfExceedingValueButton;
@@ -60,12 +66,12 @@ namespace CSharp.lab2._2
             try
             {
                 mounthButton = int.Parse(this.numberOfMonths.Text);
-                initialPaymentButton = int.Parse(this.initialPayment.Text);
-                limitOfExceedingValueButton = int.Parse(this.limitOfExceedingValue.Text);
-                limitOfExceedingDepositAmountButton = int.Parse(this.limitOfExceedingDepositAmount.Text);
-                if (mounthButton < 0 || initialPaymentButton < 0 || limitOfExceedingValueButton < 0 || limitOfExceedingDepositAmountButton < 0)
+                initialPaymentButton = double.Parse(this.initialPayment.Text);
+                limitOfExceedingValueButton = double.Parse(this.limitOfExceedingValue.Text);
+                limitOfExceedingDepositAmountButton = double.Parse(this.limitOfExceedingDepositAmount.Text);
+                if (mounthButton <= 0 || initialPaymentButton <= 0 || limitOfExceedingValueButton <= 0 || limitOfExceedingDepositAmountButton <= 0)
                 {
-                    Console.WriteLine("Значения должны быть положительны");
+                    MessageBox.Show("Значения должны быть больше 0");
                     return;
                 }
             }
@@ -74,6 +80,12 @@ namespace CSharp.lab2._2
                 MessageBox.Show("Введите корректное(ые) число(а)");
                 return;
             }
+
+            Properties.Settings.Default.mounthButton = mounthButton;
+            Properties.Settings.Default.initialPaymentButton = initialPaymentButton;
+            Properties.Settings.Default.limitOfExceedingValueButton = limitOfExceedingValueButton;
+            Properties.Settings.Default.limitOfExceedingDepositAmountButton = limitOfExceedingDepositAmountButton;
+            Properties.Settings.Default.Save();
 
             MessageBox.Show(Logic.CalculatingTheContribution(mounthButton, initialPaymentButton, limitOfExceedingValueButton, limitOfExceedingDepositAmountButton));
         }
